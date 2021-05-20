@@ -25,6 +25,12 @@ public class VideoManager : MonoBehaviour
 		videoPlayer.Stop();
 	}
 	
+	private float speed = 2f;
+    public void Rewind() {
+		videoPlayer.time -= speed;
+    } 
+	
+	
 	public void URLToVideo(string url) {
 		videoPlayer.source = VideoSource.Url;
 		videoPlayer.url = url;
